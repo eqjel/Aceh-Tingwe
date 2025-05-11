@@ -18,6 +18,16 @@
     header {
       text-align: center;
       padding: 40px 20px;
+      background: url('background.jfif') center/cover no-repeat;
+      position: relative;
+      z-index: 1;
+    }
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: -1;
     }
     header img.logo {
       max-width: 140px;
@@ -177,15 +187,15 @@
       <div class="quote-gallery">
         <div class="quote-card">
           <img class="quote-img" src="foto_soekarno.jpg" alt="Soekarno" />
-          “Aku lebih senang pemuda yang merokok dan minum kopi sambil diskusi tentang bangsa ini, daripada pemuda kutu buku yang memikirkan diri sendiri” – Soekarno
+          “Aku lebih senang pemuda yang merokok dan minum kopi sambil diskusi tentang bangsa ini, daripada pemuda kutu buku yang memikirkan diri sendiri.” – Soekarno
         </div>
         <div class="quote-card">
           <img class="quote-img" src="foto_che.jpg" alt="Che Guevara" />
-          “A smoke in moments of rest is a great friend to the solitary soldier” – Che Guevara
+          “A smoke in moments of rest is a great friend to the solitary soldier.” – Che Guevara
         </div>
         <div class="quote-card">
           <img class="quote-img" src="foto_gusdur.jpg" alt="Gus Dur" />
-          “Merokok adalah hak asasi manusia” – Gus Dur
+          “Merokok adalah hak asasi manusia.” – Gus Dur
         </div>
       </div>
     </section>
@@ -202,12 +212,12 @@
     <section class="order-form">
       <h2>Order via WhatsApp</h2>
       <form action="https://api.whatsapp.com/send" method="get" target="_blank" onsubmit="this.text.value = 'Nama: ' + this.nama.value + ' | Pesanan: ' + this.pesanan.value">
-  <input type="hidden" name="phone" value="+6281269006769" />
-  <input type="hidden" name="text" />
-  <input type="text" name="nama" placeholder="Nama" required />
-  <input type="text" name="pesanan" placeholder="Pesanan" required />
-  <button type="submit">Pesan Sekarang</button>
-</form>
+        <input type="hidden" name="phone" value="+6281269006769" />
+        <input type="hidden" name="text" />
+        <input type="text" name="nama" placeholder="Nama" required />
+        <input type="text" name="pesanan" placeholder="Pesanan" required />
+        <button type="submit">Pesan Sekarang</button>
+      </form>
     </section>
 
     <section class="social-media">
